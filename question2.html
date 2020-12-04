@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Circumference</title>
+    <style>
+        .container {
+            height: 200px;
+            width: 30%;
+            border-radius: 5px;
+            background-color: cornflowerblue;
+            text-align: center;
+            margin: auto;
+        }
+
+        label {
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            margin: 10px 5px;
+            outline: none;
+        }
+
+        .button {
+            padding: 10px;
+            border: none;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2> Circumference Calculation </h2>
+        <label> Enter radius</label>
+        <input type="text" id="radius">
+        <p id="result"> </p>
+        <button onclick="calculate()" class="button">Calculate</button>
+        <script>
+            function calculate() {
+                radius = document.getElementById("radius").value
+                let ans = calcCircumfrence(radius)
+                result.innerHTML = `
+                <p> The circumference is  ${Math.round(ans)}</p>`
+            }
+            function calcCircumfrence(radius){
+                return 2 * Math.PI * radius
+            }
+        </script>
+
+</body>
+
+</html>
